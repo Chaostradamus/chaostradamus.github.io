@@ -1,4 +1,5 @@
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -16,6 +17,14 @@
 
     button {
       font-family: "Lato", sans-serif;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
     }
 
     .bg-gray-900 {
@@ -151,11 +160,42 @@
     .z-10 {
       z-index: 10;
     }
+
+    .object-cover {
+      object-fit: cover;
+    }
+
+    .text-brand-teal {
+      color: #90cac7;
+    }
+
+    .text-brand-teal-dark {
+      color: #539d98;
+    }
+
+    .bg-white {
+      background-color: white;
+    }
+
+    .absolute {
+      position: absolute;
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: 600px) {
+      .bg-blue {
+        background-color: blue;
+      }
+    }
   </style>
 </head>
 
 <header
-  class="flex justify-between p-8 relative z-10"
+  class="flex justify-between p-8 relative z-10 mx-auto bg-blue"
   style="padding: 18px 12px"
 >
   <div class="flex justify-center items-center">
@@ -180,18 +220,41 @@
   </div>
 </header>
 
-<section class="relative" style="top: -77px">
+<section class="relative" style="">
   <video
     loop="loop"
     autoplay="autoplay"
-    playsinline=""
+    playsinline
     muted="muted"
-    class="w-full h-full object-cover"
-    style="min-height: 550px"
+    class="w-full object-cover absolute"
+    style="height: 689px; top: -77px"
+    src="./videos/galaxy.mp4"
+  ></video>
+  <div
+    style="padding: 0px 12px; padding-top: 100px; max-width: 1200px"
+    class="mx-auto"
   >
-    <source src="/_nuxt/videos/galaxy.b6c8fb5.mp4" type="video/mp4" />
-  </video>
+    <div class="relative z-10" style="max-width: 538px">
+      <h1 class="text-white" style="font-size: 60px">
+        Turbocharge your
+        <span class="text-brand-teal"> development career </span>
+      </h1>
 
+      <p
+        class="text-white"
+        style="max-width: 449px; font-size: 20px; margin-top: 30px"
+      >
+        Chris Courses provides students and professionals a college-level web
+        development education.
+      </p>
+      <button
+        class="bg-white text-brand-teal-dark border-none py-12 px-28 rounded-full"
+        style="margin-top: 28px; border-radius: 4px"
+      >
+        Get Started
+      </button>
+    </div>
+  </div>
   <!-- <img class="w-full" src="./img/heroImage.png" alt="" /> -->
 </section>
 
@@ -210,4 +273,6 @@
   RELATIVE means you move can move the element around 
   RELATIVE  is like flex. need to give something relative before using it
 
+
+  POSITION OBASOLUTE LETS YOU TAKE ELEMENT OUT OF DOCUMENT FLOW AND LETS YOUR OVERLAP IT- need to use position relative in tandem
 -->
